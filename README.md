@@ -78,6 +78,10 @@ Jar Analyzer 子项目 Java DBG (开源)
 
 ![](image/case05.png)
 
+Code Inspector 项目 (开源)
+
+![](image/case07.png)
+
 Super Xray 项目 (开源)
 
 ![](image/case06.png)
