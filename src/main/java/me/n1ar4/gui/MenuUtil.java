@@ -18,7 +18,7 @@ public class MenuUtil {
                 // 完成你的逻辑
                 System.out.println("Do New File");
                 // 如何弹出一个框
-                JOptionPane.showMessageDialog(null,"Do New File");
+                JOptionPane.showMessageDialog(null, "Do New File");
             });
             newMenu.add(connectItem);
             return newMenu;
