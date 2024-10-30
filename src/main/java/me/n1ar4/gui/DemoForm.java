@@ -30,6 +30,9 @@ public class DemoForm {
         logoLabel.setIcon(IconManager.getLogoIcon());
 
         // 如何给按钮绑定事件
+        // e->{} 本质是一个 ActionListener 实现类
+        // 你可以自己实现一个 ActionListener 传到这里
+        // e->{} 是一个简略的写法
         cleanBtn.addActionListener(e -> {
             // 清空输入框
             userNameText.setText("");
@@ -74,6 +77,9 @@ public class DemoForm {
         });
     }
 
+    // 可以使用 Alt + Insert 快捷键打开 Generate 菜单
+    // 点击 Form main() 即可根据 IDEA GUI Designer 生成 main 方法
+    // 注意要至少启动一次 才可以生成下方完整的 GUI 代码
     public static void start() {
         frame = new JFrame("java-swing-gui-starter");
 

@@ -51,6 +51,7 @@
     </dependencies>
 
     <build>
+        <!-- 以下是编译构建插件 -->
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -85,6 +86,7 @@
                             <attach>false</attach>
                             <appendAssemblyId>true</appendAssemblyId>
                             <descriptorRefs>
+                                <!-- 所有依赖打包到一个 JAR 里 -->
                                 <descriptorRef>jar-with-dependencies</descriptorRef>
                             </descriptorRefs>
                             <archive>
