@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 修改成你自己的包名 -->
+    <groupId>me.n1ar4</groupId>
+    <!-- 修改成你自己的项目名 -->
+    <artifactId>java-swing-gui-starter</artifactId>
+    <!-- 修改成你自己的版本 -->
+    <version>0.0.1</version>
+
+    <packaging>jar</packaging>
+    <!-- 你的项目描述 -->
+    <description>java-swing-gui-starter</description>
+
+    <properties>
+        <!-- 目前最新版 建议自行升级 -->
+        <flatlaf.version>3.5.1</flatlaf.version>
+        <!-- 目前最新版 建议自行升级 -->
+        <idea.forms.version>7.0.3</idea.forms.version>
+        <!-- 建议不要动 -->
+        <maven.compiler.source>8</maven.compiler.source>
+        <!-- 建议不要动 -->
+        <maven.compiler.target>8</maven.compiler.target>
+        <!-- 建议不要动 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 修改成你自己的主类 -->
+        <main.name>me.n1ar4.gui.Application</main.name>
+        <!-- 构建插件按需升级 -->
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
+        <maven.resources.version>3.3.1</maven.resources.version>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-assembly-plugin -->
+        <maven.assembly.version>3.7.1</maven.assembly.version>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <maven.compiler.version>3.13.0</maven.compiler.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
+            <version>${flatlaf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.intellij</groupId>
+            <artifactId>forms_rt</artifactId>
+            <version>${idea.forms.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven.resources.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>${maven.assembly.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>build</id>
+                        <configuration>
+                            <attach>false</attach>
+                            <appendAssemblyId>true</appendAssemblyId>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                            <archive>
+                                <manifest>
+                                    <mainClass>${main.name}</mainClass>
+                                </manifest>
+                                <manifestEntries>
+                                    <Multi-Release>true</Multi-Release>
+                                </manifestEntries>
+                            </archive>
+                        </configuration>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
