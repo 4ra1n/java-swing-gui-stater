@@ -60,28 +60,42 @@ java -jar java-swing-gui-starter-0.0.1-jar-with-dependencies.jar
 
 Jar Analyzer 项目 (开源)
 
+https://github.com/jar-analyzer/jar-analyzer
+
 ![](image/case01.png)
 
 Shell Analyzer 项目 (开源)
+
+https://github.com/4ra1n/shell-analyzer
 
 ![](image/case04.png)
 
 Mysql Fake Server 项目 (开源)
 
+https://github.com/4ra1n/mysql-fake-server
+
 ![](image/case03.png)
 
 Jar Obfuscator 项目 (开源)
+
+https://github.com/jar-analyzer/jar-obfuscator
 
 ![](image/case02.png)
 
 Jar Analyzer 子项目 Java DBG (开源)
 
+https://github.com/jar-analyzer/jar-analyzer/tree/master/src/main/java/me/n1ar4/dbg
+
 ![](image/case05.png)
 
 Code Inspector 项目 (开源)
 
+https://github.com/4ra1n/code-inspector
+
 ![](image/case07.png)
 
 Super Xray 项目 (开源)
+
+https://github.com/4ra1n/super-xray
 
 ![](image/case06.png)
